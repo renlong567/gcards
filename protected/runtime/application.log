@@ -26,3 +26,53 @@ Stack trace:
 REQUEST_URI=/gcards/index.php?r=ONESHOPGIFTCARDS/login
 HTTP_REFERER=http://localhost/
 ---
+2014/09/10 09:10:51 [error] [system.db.CDbCommand] Error in preparing SQL: SELECT "jcd_name"."KHID" AS "T1_C0", "jcd_name"."DWMQC" AS "T1_C1", "jcd_name"."DWJC" AS "T1_C2", "jcd_name"."KHLXBH_FK" AS "T1_C3", "jcd_name"."JJXZBM_FK" AS "T1_C4", "jcd_name"."SFCBS" AS "T1_C5", "jcd_name"."CWKHLB" AS "T1_C6", "jcd_name"."KHLB" AS "T1_C7", "jcd_name"."DWDZ" AS "T1_C8", "jcd_name"."DWDH" AS "T1_C9", "jcd_name"."FR" AS "T1_C10", "jcd_name"."FRTXTZ" AS "T1_C11", "jcd_name"."FRYB" AS "T1_C12", "jcd_name"."FRDH" AS "T1_C13", "jcd_name"."FRCZ" AS "T1_C14", "jcd_name"."FREMAIL" AS "T1_C15", "jcd_name"."KHYH" AS "T1_C16", "jcd_name"."HH" AS "T1_C17", "jcd_name"."ZH" AS "T1_C18", "jcd_name"."SWH" AS "T1_C19", "jcd_name"."SPDH" AS "T1_C20", "jcd_name"."SPDDH" AS "T1_C21", "jcd_name"."SPQD" AS "T1_C22", "jcd_name"."TSDH" AS "T1_C23", "jcd_name"."JSQD" AS "T1_C24", "jcd_name"."JSBZ" AS "T1_C25", "jcd_name"."JSFS" AS "T1_C26", "jcd_name"."DZJS" AS "T1_C27", "jcd_name"."XYDJ" AS "T1_C28", "jcd_name"."XZKHBZ" AS "T1_C29", "jcd_name"."XZDKH" AS "T1_C30", "jcd_name"."JKBZ" AS "T1_C31", "jcd_name"."PFBZ" AS "T1_C32", "jcd_name"."YSK" AS "T1_C33", "jcd_name"."YFK" AS "T1_C34", "jcd_name"."KHSDBZ" AS "T1_C35", "jcd_name"."KHJYMM" AS "T1_C36", "jcd_name"."HTFHZK" AS "T1_C37", "jcd_name"."HTGHZK" AS "T1_C38", "jcd_name"."ZKLX" AS "T1_C39", "jcd_name"."KYBZ" AS "T1_C40", "jcd_name"."CJRQ" AS "T1_C41", "jcd_name"."BZR" AS "T1_C42", "jcd_name"."BZ" AS "T1_C43", "jcd_name"."BMBH" AS "T1_C44", "jcd_name"."NZXSMY" AS "T1_C45", "jcd_name"."NZGHMY" AS "T1_C46", "jcd_name"."DMJB" AS "T1_C47", "jcd_name"."CSPC" AS "T1_C48", "jcd_name"."CSBZ" AS "T1_C49", "jcd_name"."CSCLZT" AS "T1_C50", "jcd_name"."FGR" AS "T1_C51", "jcd_name"."GHSXL" AS "T1_C52", "jcd_name"."XHDXL" AS "T1_C53", "jcd_name"."TSDW_MCSX" AS "T1_C54", "jcd_name"."ID" AS "T1_C55", "jcd_name"."USERNAME" AS "T1_C56", "jcd_name"."USERPASS" AS "T1_C57", "jcd_name"."SSDQ" AS "T1_C58" FROM "ONESHOP_JCDJCXXB" "jcd_name"  WHERE ("jcd_name".""=:ypl0)
+in D:\wamp\www\github\gcards\protected\views\oNESHOPGIFTCARDS\index.php (193)
+in D:\wamp\www\github\gcards\protected\controllers\ONESHOPGIFTCARDSController.php (196)
+in D:\wamp\www\github\gcards\index.php (13)
+2014/09/10 09:10:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法准备 SQL 语句: SQLSTATE[HY000]: General error: 1741 OCIStmtPrepare: ORA-01741: 非法的零长度标识符
+ (ext\pdo_oci\oci_driver.c:294)' in D:\wamp\www\github\gcards\framework\db\CDbCommand.php:218
+Stack trace:
+#0 D:\wamp\www\github\gcards\framework\db\CDbCommand.php(273): CDbCommand->prepare()
+#1 D:\wamp\www\github\gcards\framework\db\schema\CDbCommandBuilder.php(565): CDbCommand->bindValue(':ypl0', '2509')
+#2 D:\wamp\www\github\gcards\framework\db\ar\CActiveFinder.php(1350): CDbCommandBuilder->bindValues(Object(CDbCommand), Array)
+#3 D:\wamp\www\github\gcards\framework\db\ar\CActiveFinder.php(802): CJoinQuery->createCommand(Object(COciCommandBuilder))
+#4 D:\wamp\www\github\gcards\framework\db\ar\CActiveFinder.php(507): CJoinElement->runQuery(Object(CJoinQuery))
+#5 D:\wamp\www\github\gcards\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(ONESHOPGIFTCARDS))
+#6 D:\wamp\www\github\gcards\framework\db\ar\CActiveRecord.php(281): CActiveFinder->lazyFind(Object(ONESHOPGIFTCARDS))
+#7 D:\wamp\www\github\gcards\framework\db\ar\CActiveRecord.php(143): CActiveRecord->getRelated('jcd_name')
+#8 D:\wamp\www\github\gcards\framework\base\CComponent.php(612) : eval()'d code(1): CActiveRecord->__get('jcd_name')
+#9 D:\wamp\www\github\gcards\framework\base\CComponent.php(612): eval()
+#10 D:\wamp\www\github\gcards\framework\zii\widgets\grid\CDataColumn.php(137): CComponent->evaluateExpression('$data->jcd_name...', Array)
+#11 D:\wamp\www\github\gcards\framework\zii\widgets\grid\CGridColumn.php(151): CDataColumn->renderDataCellContent(0, Object(ONESHOPGIFTCARDS))
+#12 D:\wamp\www\github\gcards\framework\zii\widgets\grid\CGridView.php(616): CGridColumn->renderDataCell(0)
+#13 D:\wamp\www\github\gcards\framework\zii\widgets\grid\CGridView.php(572): CGridView->renderTableRow(0)
+#14 D:\wamp\www\github\gcards\framework\zii\widgets\grid\CGridView.php(482): CGridView->renderTableBody()
+#15 D:\wamp\www\github\gcards\framework\zii\widgets\CBaseListView.php(167): CGridView->renderItems()
+#16 [internal function]: CBaseListView->renderSection(Array)
+#17 D:\wamp\www\github\gcards\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{items}<div id=...')
+#18 D:\wamp\www\github\gcards\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#19 D:\wamp\www\github\gcards\framework\web\CBaseController.php(173): CBaseListView->run()
+#20 D:\wamp\www\github\gcards\protected\views\oNESHOPGIFTCARDS\index.php(193): CBaseController->widget('zii.widgets.gri...', Array)
+#21 D:\wamp\www\github\gcards\framework\web\CBaseController.php(126): require('D:\wamp\www\git...')
+#22 D:\wamp\www\github\gcards\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\git...', Array, true)
+#23 D:\wamp\www\github\gcards\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\git...', Array, true)
+#24 D:\wamp\www\github\gcards\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#25 D:\wamp\www\github\gcards\protected\controllers\ONESHOPGIFTCARDSController.php(196): CController->render('index', Array)
+#26 D:\wamp\www\github\gcards\framework\web\actions\CInlineAction.php(49): ONESHOPGIFTCARDSController->actionIndex()
+#27 D:\wamp\www\github\gcards\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#28 D:\wamp\www\github\gcards\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#29 D:\wamp\www\github\gcards\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#30 D:\wamp\www\github\gcards\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#31 D:\wamp\www\github\gcards\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#32 D:\wamp\www\github\gcards\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#33 D:\wamp\www\github\gcards\framework\web\CController.php(291): CFilterChain->run()
+#34 D:\wamp\www\github\gcards\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#35 D:\wamp\www\github\gcards\framework\web\CWebApplication.php(282): CController->run('index')
+#36 D:\wamp\www\github\gcards\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#37 D:\wamp\www\github\gcards\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#38 D:\wamp\www\github\gcards\index.php(13): CApplication->run()
+#39 {main}
+REQUEST_URI=/github/gcards/
+HTTP_REFERER=http://localhost/github/gcards/index.php?r=ONESHOPGIFTCARDS/login
+---
