@@ -56,6 +56,15 @@ return array(
 //			'password' => '',
 //			'charset' => 'utf8',
 //		),
+// 'db' => array(
+            // 'connectionString' => 'oci:dbname=192.168.51.21:1521/edidb;charset=UTF8',
+            // 'username' => 'testdb',
+            // 'password' => 'testdb',
+            // 'emulatePrepare' => true, // needed by some MySQL installations
+            // 'enableParamLogging' => true,
+            // 'enableProfiling' => true,
+            // 'tablePrefix' => 'oneshop_', //表的前缀
+        // ),
         'db' => array(
             'connectionString' => 'oci:dbname=192.168.51.7:1521/orcl;charset=UTF8',
             'username' => 'yanfatest',
