@@ -75,57 +75,57 @@
                 <?php
                 $act_id = strtoupper(Yii::app()->controller->id);
                 $r = $act_id . '/' . $this->getAction()->getId();
-                $navs = array(
-                    '读书卡查询' => array(
-                        'ONESHOPGIFTCARDS/index',
-                        'icon-file',
-                        array(
-//                            '所有成员列表' => 'ONESHOPORDER/index',
-//                            '分组显示' => '#',
-                        )
-                    ),
-                    '读书卡激活' => array(
-                        'ONESHOPGIFTCARDS/active',
-                        'icon-file',
-                        array(
-//                            '所有成员列表' => 'ONESHOPORDER/index',
-//                            '分组显示' => '#',
-                        )
-                    ),
-                    '读书卡统计' => array('ONESHOPGIFTCARDS/count', 'icon-file', array()),
-                    '贵宾卡查询' => array('ONESHOPGIFTCARDS/oldcard', 'icon-file', array()),
-                    '贵宾卡统计' => array('ONESHOPGIFTCARDS/oldcardcount', 'icon-file', array()),
-                    '登陆密码修改' => array('ONESHOPGIFTCARDS/update', 'icon-file', array()),
-                    '帮助' => array('ONESHOPGIFTCARDS/help', 'icon-file', array()),
-                );
+                // $navs = array(
+                    // '读书卡查询' => array(
+                        // 'ONESHOPGIFTCARDS/index',
+                        // 'icon-file',
+                        // array(
+                           // '所有成员列表' => 'ONESHOPORDER/index',
+                           // '分组显示' => '#',
+                        // )
+                    // ),
+                    // '读书卡激活' => array(
+                        // 'ONESHOPGIFTCARDS/active',
+                        // 'icon-file',
+                        // array(
+                           // '所有成员列表' => 'ONESHOPORDER/index',
+                           // '分组显示' => '#',
+                        // )
+                    // ),
+                    // '读书卡统计' => array('ONESHOPGIFTCARDS/count', 'icon-file', array()),
+                    // '贵宾卡查询' => array('ONESHOPGIFTCARDS/oldcard', 'icon-file', array()),
+                    // '贵宾卡统计' => array('ONESHOPGIFTCARDS/oldcardcount', 'icon-file', array()),
+                    // '登陆密码修改' => array('ONESHOPGIFTCARDS/update', 'icon-file', array()),
+                    // '帮助' => array('ONESHOPGIFTCARDS/help', 'icon-file', array()),
+                // );
 
-//                $navs = array(
-//                    '查询' => array(
-//                        '',
-//                        'icon-file',
-//                        array(
-//                            '读书卡查询' => 'ONESHOPGIFTCARDS/index',
-//                            '贵宾卡查询' => 'ONESHOPGIFTCARDS/oldcard',
-//                        )
-//                    ),
-//                    '激活' => array(
-//                        '',
-//                        'icon-file',
-//                        array(
-//                            '读书卡激活' => 'ONESHOPGIFTCARDS/active',
-//                        )
-//                    ),
-//                    '统计' => array(
-//                        '',
-//                        'icon-file',
-//                        array(
-//                            '读书卡统计' => 'ONESHOPGIFTCARDS/count',
-//                            '贵宾卡统计' => 'ONESHOPGIFTCARDS/oldcardcount',
-//                        )
-//                    ),
-//                    '登陆密码修改' => array('ONESHOPGIFTCARDS/update', 'icon-file', array()),
-//                    '帮助' => array('ONESHOPGIFTCARDS/help', 'icon-file', array()),
-//                );
+               $navs = array(
+                   '查询' => array(
+                       '',
+                       'icon-file',
+                       array(
+                           '读书卡查询' => 'ONESHOPGIFTCARDS/index',
+                           '贵宾卡查询' => 'ONESHOPGIFTCARDS/oldcard',
+                       )
+                   ),
+                   '激活' => array(
+                       '',
+                       'icon-file',
+                       array(
+                           '读书卡激活' => 'ONESHOPGIFTCARDS/active',
+                       )
+                   ),
+                   '统计' => array(
+                       '',
+                       'icon-file',
+                       array(
+                           '读书卡统计' => 'ONESHOPGIFTCARDS/count',
+                           '贵宾卡统计' => 'ONESHOPGIFTCARDS/oldcardcount',
+                       )
+                   ),
+                   '登陆密码修改' => array('ONESHOPGIFTCARDS/update', 'icon-file', array()),
+                   '帮助' => array('ONESHOPGIFTCARDS/help', 'icon-file', array()),
+               );
 
                 $html = '';
                 foreach ($navs as $key => $value)
